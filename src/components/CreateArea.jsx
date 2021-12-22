@@ -1,5 +1,6 @@
 import React from "react";
-import Note from "./Note";
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
 
 function CreateArea(props) {
 
@@ -33,7 +34,9 @@ function CreateArea(props) {
       <form className="create-note">
         <input onChange={handleChange} name="title" placeholder="Title" value={note.title} />
         <textarea onChange={handleChange} name="content" placeholder="Take a note..." rows="3" value={note.content} />
-        <button onClick={submitNote}>Add</button>
+        <Fab onClick={submitNote}>
+          <AddIcon />
+        </Fab>
       </form>
     </div>
   )
